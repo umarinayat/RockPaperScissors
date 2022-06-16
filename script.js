@@ -22,7 +22,8 @@ const game = () => {
     let result;
 
     for(let i = 0; i < 5; i++){
-        result = playRound(computerSelection, playerSelection)
+        result = (playRound(computerSelection, playerSelection))
+        console.log(result)
         if(result == "Player won"){
             playerScore++
         }
@@ -30,8 +31,9 @@ const game = () => {
             computerScore++
         }
     }
+    return console.log("Computer Score = " + computerScore + ".Player Score = " + playerScore)
 }
 const computerSelection = computerPlay()
-const playerSelection = "Rock"
+const playerSelection = prompt("Please input your choice")
 game()
 
